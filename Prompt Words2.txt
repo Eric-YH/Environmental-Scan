@@ -1,0 +1,69 @@
+You are given a CSV with the following columns:
+
+- id
+- core_issue
+
+Each row represents a distinct topic extracted from a statement.
+
+Your task is to group these topics into a CLEAR set of MUTUALLY EXCLUSIVE categories.
+
+========================
+STRICT RULES (MANDATORY)
+========================
+
+1. Each id MUST appear in EXACTLY ONE category.
+   - No id may appear in more than one category.
+   - No id may be omitted or skipped.
+
+2. Categories MUST be mutually exclusive.
+   - If two topics are closely related, they MUST be merged.
+   - Avoid overlap between categories.
+
+3. Each category MUST cover MULTIPLE topics.
+   - Generally at least 2–3 ids.
+   - Only single-topic categories are allowed if absolutely unavoidable.
+
+4. Do NOT create overly narrow or event-specific categories.
+   - Generalize topics whenever possible.
+
+5. Avoid vague or catch-all categories such as "General Issues", "Miscellaneous", or "Higher Education Trends", except as a last resort for truly unmatched topics.
+
+6. Limit the total number of categories to BETWEEN 6 AND 8.
+   - You may create one "Other" category if necessary, but it must include ALL remaining unassigned topics.
+
+7. Categories should represent fundamentally different dimensions, such as:
+   - Technology in education
+   - Regulation and governance
+   - Workforce and careers
+   - Student support and well-being
+   - Diversity and inclusion
+   - Enrollment and access
+   - Finance and operations
+   - Other (only if topics cannot reasonably fit elsewhere)
+
+8. Minimize the use of "Other". Only assign topics there if they do not fit meaningfully into other categories. ALL leftover topics must be consolidated into a single "Other" category.
+
+========================
+OUTPUT FORMAT
+========================
+
+- Output a CSV with columns:
+  category,description,covers
+- Wrap ALL text fields in double quotes.
+- Covers must be a comma-separated list of ids.
+- Output CSV only. Do NOT include explanations or notes.
+
+========================
+FINAL SELF-CHECK
+========================
+
+- Every id appears exactly once.
+- No category contains only a single id unless unavoidable.
+- Total categories are between 6 and 8.
+- "Other" includes all leftover unassigned topics, if used.
+
+========================
+INPUT CSV
+========================
+
+{TOPICS}

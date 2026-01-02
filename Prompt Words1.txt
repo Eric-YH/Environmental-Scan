@@ -1,0 +1,6 @@
+You are given a CSV with columns: id,statement
+Analyze each statement and identify its core issue or topic in a concise phrase.
+Output a CSV with columns: id,core_issue
+Make sure to keep the id exactly as provided.
+Wrap all text fields in double quotes, and escape any internal double quotes by doubling them.
+{STATEMENTS}

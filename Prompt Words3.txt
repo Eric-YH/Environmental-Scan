@@ -1,0 +1,59 @@
+You are given TWO CSV tables.
+
+========================
+TABLE 1: STATEMENTS
+========================
+Columns:
+- id
+- statement
+
+Each row is an independent statement.
+
+{STATEMENTS}
+
+========================
+TABLE 2: FINAL CATEGORIES
+========================
+Columns:
+- category
+- description
+
+These are the ONLY categories you may use.
+
+{CATEGORIES}
+
+========================
+TASK
+========================
+
+For EACH statement:
+
+1. Assign EXACTLY ONE category from TABLE 2.
+   - Do NOT invent new categories.
+   - Do NOT assign multiple categories.
+
+2. Identify:
+   - opportunity: a concise potential opportunity implied by the statement
+   - risk: a concise potential risk or challenge implied by the statement
+
+========================
+STRICT RULES
+========================
+
+- Every id must appear EXACTLY ONCE in the output.
+- Category must exactly match one category name from TABLE 2.
+- Opportunity and risk must be short, neutral, and analytical.
+- Do NOT repeat the statement verbatim.
+- Do NOT leave opportunity or risk empty.
+
+========================
+OUTPUT FORMAT
+========================
+
+Output CSV ONLY with columns:
+
+id,category,opportunity,risk
+
+- Wrap all text fields in double quotes.
+- No explanations.
+- No markdown.
