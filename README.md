@@ -7,7 +7,7 @@ The workflow combines automated topic extraction and classification with manual 
 
 ## Repository Structure
 
-
+```plaintext
 classify/
 ├── Environmental Scan.xlsx          # Input file (first column contains raw text)
 ├── Prompt Words1.txt               # Prompt for topic extraction (Step 2)
@@ -21,7 +21,7 @@ classify/
 ├── step5_final_classification.csv  # Final classification results
 └── README.md                        # This README
 
-## Requirements
+Requirements
 
 Minimum required versions:
 requests>=2.31.0
@@ -29,14 +29,14 @@ python-docx>=0.8.11
 pandas>=1.5.0
 openpyxl>=3.0.10
 
-## API Key Setup (Required)
+API Key Setup (Required)
 
 Save your OpenRouter API key in a text file named:
 OpenRouter API key.txt
 Place this file in the project root directory.  
 **Do not commit this file to version control.**
 
-## Notes
+Notes
 
 - Batch processing is used to reduce cost and improve stability  
 - LLM temperature is set to `0` for deterministic output  
