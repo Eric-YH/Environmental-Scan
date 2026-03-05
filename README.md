@@ -5,19 +5,21 @@ The workflow combines automated topic extraction and classification with manual 
 
 ---
 
-## Project Structure
+## Repository Structure
+
+```plaintext
 classify/
-├── Environmental Scan.xlsx # Input file (first column contains raw text)
-├── Prompt Words1.txt # Prompt for topic extraction (Step 2)
-├── Prompt Words2.txt # Prompt for category induction (Step 3)
-├── Prompt Words3.txt # Prompt for final classification (Step 5)
-├── OpenRouter API key.txt # OpenRouter API key (NOT committed)
-├── common.py # Shared utilities (LLM call, IO helpers)
-├── step2_topics.csv # Extracted topics (LLM output)
-├── step3_suggested_categories.csv # LLM-suggested taxonomy
-├── final_categories.csv # (Optional) Human-reviewed taxonomy
-├── step5_final_classification.csv # Final classification results
-└── README.md
+├── Environmental Scan.xlsx          # Input file (first column contains raw text)
+├── Prompt Words1.txt               # Prompt for topic extraction (Step 2)
+├── Prompt Words2.txt               # Prompt for category induction (Step 3)
+├── Prompt Words3.txt               # Prompt for final classification (Step 5)
+├── OpenRouter API key.txt          # OpenRouter API key (not committed)
+├── common.py                       # Shared utilities: LLM calls, IO helpers
+├── step2_topics.csv                # Extracted topics from Step 2 (LLM output)
+├── step3_suggested_categories.csv  # LLM-suggested taxonomy (Step 3)
+├── final_categories.csv            # Optional human-reviewed taxonomy
+├── step5_final_classification.csv  # Final classification results
+└── README.md                        # This README
 
 ## Requirements
 
