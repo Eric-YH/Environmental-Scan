@@ -7,7 +7,7 @@ The workflow combines automated topic extraction and classification with manual 
 
 ## Repository Structure
 
-```plaintext
+
 classify/
 ├── Environmental Scan.xlsx          # Input file (first column contains raw text)
 ├── Prompt Words1.txt               # Prompt for topic extraction (Step 2)
